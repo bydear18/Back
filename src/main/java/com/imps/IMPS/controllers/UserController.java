@@ -25,7 +25,8 @@ import com.imps.IMPS.repositories.UserRepository;
 import com.imps.IMPS.EmailService;
 
 
-@CrossOrigin
+
+@CrossOrigin(origins = "https://imps-online.vercel.app")
 @RestController
 @RequestMapping(path = "/services")
 public class UserController {
@@ -188,7 +189,6 @@ public class UserController {
         }
     }
     
-    @CrossOrigin(origins = "https://imps-online.vercel.app")
     @PostMapping(path = "/createDefaultUsers")
     public @ResponseBody String createDefaultUsers(@RequestBody Map<String, String> request) {
         String adminEmail = request.get("adminEmail");
