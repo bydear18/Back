@@ -188,7 +188,7 @@ public class UserController {
         }
     }
     
-
+    @CrossOrigin(origins = "https://imps-online.vercel.app")
     @PostMapping(path = "/createDefaultUsers")
     public @ResponseBody String createDefaultUsers(@RequestBody Map<String, String> request) {
         String adminEmail = request.get("adminEmail");
